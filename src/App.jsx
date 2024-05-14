@@ -71,7 +71,8 @@ export const App = () => {
 
     <div className="app">
       <header>
-        <h1>La poke Api</h1>
+      <p>yxcvbnmlkjh098765dtg2clik</p>
+        <h1 className="title">La poke Api</h1>
         <form onSubmit={(e) => {
           e.preventDefault();
           searchPokemon();
@@ -124,6 +125,9 @@ export const App = () => {
           )}
         </section>
       </main>
+      <footer>
+        <p>qwertzuiopasdfghjkl23456789</p>
+      </footer>
     </div>
   )
 }
