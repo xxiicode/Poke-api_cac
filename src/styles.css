@@ -3,7 +3,6 @@
     src: url('./assets/POKPIX1.TTF') format('truetype');
 }
 
-
 body {
     margin: 0;
 }
@@ -11,13 +10,12 @@ body {
 .app {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
     margin: 0;
     height: 100vh;
-    justify-content: space-between;
 }
 
 header {
@@ -27,93 +25,89 @@ header {
     background-color: #5DB9FF;
     width: 100%;
     padding-bottom: 20px;
+}
 
-    & h1 {
-        text-transform: uppercase;
-    }
+header h1 {
+    text-transform: uppercase;
+}
 
-    & input {
-        width: 200px;
-        height: 40px;
-        border-radius: 10px;
-        border: 1px solid white;
-        font-size: 18px;
-        padding-left: 10px;
-        margin-bottom: 10px;
+header input {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: 18px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
 
-    }
-
-    & button {
-        background-color: #2c71a5;
-        color: white;
-        border: none;
-        padding-block: 10px;
-        padding-inline: 15px;
-        border-radius: 10px;
-        font-weight: 500;
-        cursor: pointer;
-    }
+header button {
+    background-color: #2c71a5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 main {
     background-color: white;
     width: 100%;
-
- 
 }
+
 section.pokedex {
-    text-align: center;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
-    " name type "
-    " pic stats ";
+        "name type"
+        "pic stats";
     align-items: center;
-    margin-inline: 0;
-    margin: 20px;
+    justify-items: center;
+    margin: 20px auto;
+    padding: 40px 20px;
     background-color: #d7253d;
     border: 5px solid #844724;
     border-radius: 15px;
-    justify-items: center;
-    padding: 40px;
-    width: 500px;
-    margin-inline: auto;
-   
+    max-width: 500px;
 }
-h1 {
-    margin: 10px 0 10px 0;
-}
-h2 {
 
+h1 {
+    margin: 10px 0;
+}
+
+h2 {
     text-transform: capitalize;
-    margin-block: 0;  
+    margin: 0;
 }
 
 h3 {
-    margin-block: 0;
+    margin: 0;
     font-weight: 700;
     font-size: 30px;
 }
+
 small {
-    margin-top: 0px;
+    margin-top: 0;
     font-size: 11px;
     color: #ffffff;
-    opacity: .9;
+    opacity: 0.9;
 }
+
 .fail {
     grid-column: span 2;
     font-size: 12px;
-    
 }
+
 .stats {
     display: grid;
     grid-area: stats;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 50px 50px;
     grid-auto-flow: column;
-    align-items:center;
+    align-items: center;
     justify-content: flex-end;
-    grid-auto-flow: column;
+    column-gap: 10px;
     width: auto;
     border-radius: 10px;
     padding-top: 15px;
@@ -122,22 +116,26 @@ small {
 .type {
     grid-area: type;
 }
+
 img {
     background-color: white;
     border-radius: 10px;
-    margin-block: 20px;    
+    margin: 20px 0;
     width: 200px;
 }
+
 .imagen {
     grid-area: pic;
     position: relative;
 }
+
 .num {
     position: absolute;
     bottom: 30px;
     left: 75px;
     font-size: 15px;
 }
+
 .nombre {
     grid-area: name;
 }
@@ -151,7 +149,10 @@ form {
     flex-direction: column;
     margin-bottom: 10px;
 }
+
 footer p, header p {
     font-family: 'POKPIX1', sans-serif;
     user-select: none;
+    text-align: center;
+    word-break: break-word;
 }
