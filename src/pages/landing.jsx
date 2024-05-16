@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Axios from "axios"
 import Buscador from '../components/Buscador'
 import Pokedex from '../components/Pokedex'
@@ -16,6 +16,16 @@ export const Landing = () => {
     defense: "",
     type: "",
   });
+
+  const [favoritos, setFavoritos] = useState(() => {
+    const saveFavoritos = localStorage.getItem('favoritos');
+    return saveFavoritos ? JSON.parse(saveFavoritos) : [];
+});
+
+useEffect(() => {
+    localStorage.setItem('favoritos', JSON.stringify(favoritos));
+}, [favoritos]);
+
 
   const searchPokemon = (pokeName) => {
     Axios.get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`).then(
@@ -44,6 +54,16 @@ export const Landing = () => {
     });
   };
 
+  const toggleFavorito = (pokemon) => {
+    setFavoritos((prevFavoritos) => {
+        if (prevFavoritos.some((fav) => fav.number === pokemon.number)) {
+            return prevFavoritos.filter((fav) => fav.number !== pokemon.number);
+        } else {
+            return [...prevFavoritos, pokemon];
+        }
+    });
+};
+
   return (
     <div className="app">
       <header>
@@ -52,11 +72,16 @@ export const Landing = () => {
         <Buscador onSearch={searchPokemon} />
       </header>
       <main>
-        <Pokedex pokemon={pokemon} pokeChosen={pokeChosen} pokeFail={pokeFail} />
+        <Pokedex pokemon={pokemon} pokeChosen={pokeChosen} pokeFail={pokeFail}   toggleFavorito={toggleFavorito} favoritos={favoritos} />
       </main>
       <footer>
         <p>qwetzuiopasdfghjkl23456789</p>
       </footer>
+   
+
+    <aside className="aside">
+      
+    </aside>
     </div>
   );
 };

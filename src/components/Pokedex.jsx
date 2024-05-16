@@ -1,7 +1,9 @@
 import React from 'react';
-import {TypeEmojis} from './TypeEmojis';
+import { TypeEmojis } from './TypeEmojis'; 
 
-const Pokedex = ({ pokemon, pokeChosen, pokeFail }) => {
+const Pokedex = ({ pokemon, pokeChosen, pokeFail, toggleFavorito, favoritos }) => {
+  const isFavorito = favoritos.some(fav => fav.number === pokemon.number);
+
   return (
     <section className="pokedex">
       {!pokeFail ? <h3></h3> : <h3 className="fail">No hay resultados</h3>}
@@ -32,6 +34,9 @@ const Pokedex = ({ pokemon, pokeChosen, pokeFail }) => {
               <TypeEmojis type={pokemon.type} />
             </h3>
           </div>
+          <button class="favorito" onClick={() => toggleFavorito(pokemon)}>
+            {isFavorito ? '💖 Quitar de Favoritos' : '🤍 Añadir a Favoritos'}
+          </button>
         </>
       )}
     </section>

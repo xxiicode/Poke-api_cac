@@ -67,7 +67,7 @@ section.pokedex {
     align-items: center;
     justify-items: center;
     margin: 20px auto;
-    padding: 40px 20px;
+    padding: 20px 20px;
     background-color: #d7253d;
     border: 5px solid #844724;
     border-radius: 15px;
@@ -185,4 +185,15 @@ header p {
         display: block;
         margin-top: 10px;
     }
+}
+
+button.favorito {
+    background: yellow;
+    color: black;
+    border-color: #5f27d3;
+    border-radius: 10px;
+    padding: 10px 10px;
+    font-weight: 700;
+    opacity: .9;
+    justify-self: flex-end;
 }
