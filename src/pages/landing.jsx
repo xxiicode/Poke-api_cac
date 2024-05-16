@@ -47,7 +47,7 @@ export const Landing = () => {
   return (
     <div className="app">
       <header>
-        <p>yxcvbnmlkjh098765dtg2clik</p>
+
         <h1 className="title">La poke Api</h1>
         <Buscador onSearch={searchPokemon} />
       </header>
