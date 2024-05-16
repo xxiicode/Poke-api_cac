@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import Axios from "axios"
 import Buscador from '../components/Buscador'
 import Pokedex from '../components/Pokedex'
+import Favoritos from '../components/Favoritos';
 
 export const Landing = () => {
   const [pokeChosen, setPokeChosen] = useState(false);
@@ -17,14 +18,19 @@ export const Landing = () => {
     type: "",
   });
 
+  const [showFavoritos, setShowFavoritos] = useState(false);
+
+
   const [favoritos, setFavoritos] = useState(() => {
     const saveFavoritos = localStorage.getItem('favoritos');
     return saveFavoritos ? JSON.parse(saveFavoritos) : [];
-});
+  });
 
-useEffect(() => {
+
+  useEffect(() => {
     localStorage.setItem('favoritos', JSON.stringify(favoritos));
-}, [favoritos]);
+  }, [favoritos]);
+
 
 
   const searchPokemon = (pokeName) => {
@@ -56,13 +62,17 @@ useEffect(() => {
 
   const toggleFavorito = (pokemon) => {
     setFavoritos((prevFavoritos) => {
-        if (prevFavoritos.some((fav) => fav.number === pokemon.number)) {
-            return prevFavoritos.filter((fav) => fav.number !== pokemon.number);
-        } else {
-            return [...prevFavoritos, pokemon];
-        }
+      if (prevFavoritos.some((fav) => fav.number === pokemon.number)) {
+        return prevFavoritos.filter((fav) => fav.number !== pokemon.number);
+      } else {
+        return [...prevFavoritos, pokemon];
+      }
     });
-};
+  };
+
+  const toggleVisible = () => {
+    setShowFavoritos(!showFavoritos);
+  };
 
   return (
     <div className="app">
@@ -70,18 +80,19 @@ useEffect(() => {
 
         <h1 className="title">La poke Api</h1>
         <Buscador onSearch={searchPokemon} />
+
+        <button onClick={toggleVisible}>
+          {showFavoritos ? 'Ocultar Favoritos' : 'Mostrar Favoritos'}
+        </button>
       </header>
       <main>
-        <Pokedex pokemon={pokemon} pokeChosen={pokeChosen} pokeFail={pokeFail}   toggleFavorito={toggleFavorito} favoritos={favoritos} />
+        <Pokedex pokemon={pokemon} pokeChosen={pokeChosen} pokeFail={pokeFail} toggleFavorito={toggleFavorito} favoritos={favoritos} />
       </main>
-      <footer>
+      <Favoritos favoritos={favoritos} className={showFavoritos ? 'visible' : ''} toggleVisible={toggleVisible}/>
+{/*       <footer>
         <p>qwetzuiopasdfghjkl23456789</p>
-      </footer>
-   
+      </footer> */}
 
-    <aside className="aside">
-      
-    </aside>
     </div>
   );
 };

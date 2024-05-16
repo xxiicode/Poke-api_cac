@@ -8,7 +8,7 @@ const Pokedex = ({ pokemon, pokeChosen, pokeFail, toggleFavorito, favoritos }) =
     <section className="pokedex">
       {!pokeFail ? <h3></h3> : <h3 className="fail">No hay resultados</h3>}
       {!pokeChosen ? (
-        <h2 className="please">Elija un Pokémon</h2>
+        <h2 className="please">Busca un Pokémon</h2>
       ) : (
         <>
           <div className="nombre">
