@@ -16,7 +16,7 @@ const Buscador = ({ onSearch }) => {
         onChange={(e) => setPokeName(e.target.value.toLowerCase())}
         placeholder="Buscar Pokémon"
       />
-      <button type="submit">Buscar</button>
+      <button class="btn btn-primary" type="submit">Buscar</button>
     </form>
   );
 };

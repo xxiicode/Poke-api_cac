@@ -75,13 +75,13 @@ export const Landing = () => {
   };
 
   return (
-    <div className="app">
+    <div className="app container">
       <header>
 
         <h1 className="title">La poke Api</h1>
         <Buscador onSearch={searchPokemon} />
 
-        <button onClick={toggleVisible}>
+        <button class="btn btn-info" onClick={toggleVisible}>
           {showFavoritos ? 'Ocultar Favoritos' : 'Mostrar Favoritos'}
         </button>
       </header>

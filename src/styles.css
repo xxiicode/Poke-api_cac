@@ -1,4 +1,7 @@
-@font-face {
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+/* @font-face {
     font-family: 'POKPIX1';
     src: url('./assets/POKPIX1.TTF') format('truetype');
 }
@@ -32,7 +35,7 @@ header h1 {
     font-size: 9vw;
     color: white;
     text-shadow: 
-    2px 2px 0 #000,  /* Desplazamiento de sombra x, y, difuminado, color */
+    2px 2px 0 #000,  
     -2px -2px 0 #000,
     2px -2px 0 #000,
     -2px 2px 0 #000;
@@ -223,14 +226,14 @@ button.favorito {
   }
 
   header {
-    background-image: url(./assets/pokeback.jpg); /* Image with background color 1 */
+    background-image: url(./assets/pokeback.jpg); 
     background-size: cover;
     background-position: top center;
  
   }
   
   main {
-    background-image: url(./assets/pokeback_w.jpg); /* Image with background color 2 */
+    background-image: url(./assets/pokeback_w.jpg); 
     background-size: cover;
     background-position: 0px -385px;
     height: 100%;
@@ -263,4 +266,4 @@ button.favorito {
     h2 {
         font-size: 25px;
     }
-}
+} */

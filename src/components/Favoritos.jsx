@@ -3,7 +3,7 @@ import React from 'react';
 const Favoritos = ({ favoritos, className, toggleVisible }) => {
   return (
     <aside className={`favoritos ${className}`}>
-        <button className="close-button" onClick={toggleVisible}>X</button>
+      <button class="btn btn-close" className="close-button" onClick={toggleVisible}></button>
       <h2>Pokémon Favoritos</h2>
       <div className="favoritos-lista">
         {favoritos.length === 0 ? (

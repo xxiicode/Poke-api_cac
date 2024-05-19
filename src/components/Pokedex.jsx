@@ -34,7 +34,7 @@ const Pokedex = ({ pokemon, pokeChosen, pokeFail, toggleFavorito, favoritos }) =
               <TypeEmojis type={pokemon.type} />
             </h3>
           </div>
-          <button class="favorito" onClick={() => toggleFavorito(pokemon)}>
+          <button class="btn" onClick={() => toggleFavorito(pokemon)}>
             {isFavorito ? '💖 Quitar de Favoritos' : '🤍 Añadir a Favoritos'}
           </button>
         </>
