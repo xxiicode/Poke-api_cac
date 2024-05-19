@@ -75,24 +75,20 @@ export const Landing = () => {
   };
 
   return (
-    <div className="app container">
-      <header>
-
-        <h1 className="title">La poke Api</h1>
-        <Buscador onSearch={searchPokemon} />
-
-        <button class="btn btn-info" onClick={toggleVisible}>
-          {showFavoritos ? 'Ocultar Favoritos' : 'Mostrar Favoritos'}
-        </button>
-      </header>
-      <main>
-        <Pokedex pokemon={pokemon} pokeChosen={pokeChosen} pokeFail={pokeFail} toggleFavorito={toggleFavorito} favoritos={favoritos} />
-      </main>
-      <Favoritos favoritos={favoritos} className={showFavoritos ? 'visible' : ''} toggleVisible={toggleVisible}/>
-{/*       <footer>
-        <p>qwetzuiopasdfghjkl23456789</p>
-      </footer> */}
-
+    <div>
+      <div className="app container">
+        <header>
+          <h1 className="title">La poke Api</h1>
+          <Buscador onSearch={searchPokemon} />
+          <button class="btn btn-info" onClick={toggleVisible}>
+            {showFavoritos ? 'Ocultar Favoritos' : 'Mostrar Favoritos'}
+          </button>
+        </header>
+        <main>
+          <Pokedex pokemon={pokemon} pokeChosen={pokeChosen} pokeFail={pokeFail} toggleFavorito={toggleFavorito} favoritos={favoritos} />
+        </main>
+      </div>
+      <Favoritos favoritos={favoritos} className={showFavoritos ? 'visible' : ''} toggleVisible={toggleVisible} />
     </div>
   );
 };
