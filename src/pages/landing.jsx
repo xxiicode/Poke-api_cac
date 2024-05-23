@@ -128,12 +128,12 @@ export const Landing = () => {
           <button id="button-favs" className="btn btn-info" onClick={toggleVisible}>
             {showFavoritos ? 'Ocultar Favoritos' : 'Mostrar Favoritos'}
           </button>
-          <button className="btn btn-primary" onClick={getRandomPokemon}>Obtener Pokémon Aleatorio</button> {/* Nuevo botón para obtener un Pokémon aleatorio */}
+          <button className="btn btn-primary" onClick={getRandomPokemon}>🔮 Obtener Pokémon Aleatorio 🔮</button> {/* Nuevo botón para obtener un Pokémon aleatorio */}
         </header>
         <main>
           {/* Lista de Pokémon */}
           {pokemons.length === 0 ? (
-            <h2 className="please">Busca un Pokémon</h2>
+            <h2 className="please">🧙‍♂️ Aquí aparecerá tu Pokemón ✨</h2>
           ) : (
             pokemons.map((pokemon) => (
               <Pokedex

@@ -27,3 +27,4 @@ export const TypeEmojis = ({ type }) => {
     
   );
 };
+
