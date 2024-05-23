@@ -15,7 +15,7 @@ export const App = () => {
       </Routes>
     </BrowserRouter>
     <PelisPokemonC/>
-    <p className="text-center mb-5 mt-5 p-3 bg-body rounded"> CAC Grupo XVIII - 2024 ® </p>
+    <p className="text-center mb-0 mt-5 p-3 border-top bg-body"> CAC Grupo XVIII - 2024 ® </p>
     </>
   )
 }

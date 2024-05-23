@@ -7,7 +7,7 @@ const Home = () => {
     }
     return (
         <div>
-            <h2 className='googleado'>Estas Logueado con GOOGLE</h2>
+            <h2 className='googleado'>Google account</h2>
             <div className='botonIng'><button className="btn btn-info" onClick={logOut}>Logout</button></div>
         </div>
     )

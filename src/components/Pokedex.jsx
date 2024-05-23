@@ -38,7 +38,7 @@ const Pokedex = ({ pokemon, pokeFail, toggleFavorito, isFavorito }) => {
           </div>
         </div>
       </div>
-      <button className="btn agregarfav" onClick={() => toggleFavorito(pokemon)}>
+      <button className="btn agregarfav align-self-end" onClick={() => toggleFavorito(pokemon)}>
         {isFavorito ? '💖 Quitar de Favoritos' : '🤍 Añadir a Favoritos'}
       </button>
     </section>

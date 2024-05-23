@@ -66,7 +66,11 @@ header h1 {
       opacity: 1;
     }
   }
-  
+
+.please {
+  text-shadow: -3px 2px 2px #000,
+  1px -1px 4px #000;
+}
 
 .pokedex, .please {
     display: flex;
@@ -76,11 +80,7 @@ header h1 {
     text-align: center;
     margin-inline: auto;
     color: white;
-    text-shadow: 
-    2px 2px 2px #000,  
-    -2px -2px 2px #000,
-    2px -2px 2px #000,
-    -2px 2px 2px #000;
+
     letter-spacing: 1px;
     font-size: x-large;
     /*background-color: #3c7dca;*/
@@ -270,7 +270,8 @@ form {
    position: fixed;
     width: 365px;
     height: 100%;
-    left: 250px;
+    left: 0px;
+    top: 0px;
     padding: 15px;
     /*padding-top: 15px;*/
    }
@@ -285,7 +286,6 @@ form {
   border-radius: 10px;
   background-color: azure;
   width: 100%;
-  height: 350px;
 }
 
 .lupa-2 {
