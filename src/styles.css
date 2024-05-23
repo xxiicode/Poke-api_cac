@@ -1,16 +1,17 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 #root {
-    background-color: black;
+    /*background-color: black;*/
+    background-image: url(assets/pokedex.webp);
     min-height: 100vh;
     
 }
 
 .app {
-    background-color: #ffcb04;
+    /*background-color: #ffcb04;*/
+    background-image: url(assets/pokeback.jpg);
     min-height: 100vh;
     padding-block: 20px;
-    
 }
 header {
     text-align: center;
@@ -30,8 +31,42 @@ header h1 {
     -2px -2px 0 #000,
     2px -2px 0 #000,
     -2px 2px 0 #000;
-    
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
+
+.title {
+            -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1 both;
+	        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1 both;
+}
+
+@-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  
 
 .pokedex, .please {
     display: flex;
@@ -40,7 +75,16 @@ header h1 {
     align-items: center;
     text-align: center;
     margin-inline: auto;
-    background-color: #3c7dca;
+    color: white;
+    text-shadow: 
+    2px 2px 2px #000,  
+    -2px -2px 2px #000,
+    2px -2px 2px #000,
+    -2px 2px 2px #000;
+    letter-spacing: 1px;
+    font-size: x-large;
+    /*background-color: #3c7dca;*/
+    background-image: url(assets/pokedex.webp);
     border: 3px solid black;
     border-radius: 10px;
     width: 900px;
@@ -60,8 +104,6 @@ header input {
     margin-bottom: 10px;
     text-align: center;
 }
-
-
 
 .pokedex-header {
     margin-bottom: 20px;
@@ -198,7 +240,7 @@ header input {
   #button-favs {
     position: absolute;
     top: 14px;
-    right: 384px;
+    right: 284px;
 }
 
 .fail {
@@ -214,4 +256,39 @@ form {
     width: 400px;
     align-items: center;
     margin-inline: auto;
+}
+.lupa {
+    width: 350px;
+    margin-top: 20px;
+}
+
+.lupa-1 {
+    padding: 20px;
+}
+
+.botonIng {
+   position: fixed;
+    width: 365px;
+    height: 100%;
+    left: 250px;
+    padding: 15px;
+    /*padding-top: 15px;*/
+   }
+
+.googleado {
+    font-size: medium;
+    margin-left: 110px;
+    padding-top: 30px;
+}
+
+.pelisImg{
+  border-radius: 10px;
+  background-color: azure;
+  width: 100%;
+  height: 350px;
+}
+
+.lupa-2 {
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
