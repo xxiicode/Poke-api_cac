@@ -14,6 +14,7 @@ export const App = () => {
         <Route path="/" element={<Landing />}/>
       </Routes>
     </BrowserRouter>
+    <Landing/>
     <PelisPokemonC/>
     <p className="text-center mb-0 mt-5 p-3 border-top bg-body"> CAC Grupo XVIII - 2024 ® </p>
     </>
